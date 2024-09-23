@@ -1,0 +1,47 @@
+import Image from "next/image";
+import CateringMenuBanner from "/public/images/menu-banner.jpg";
+
+const CateringMenu = ({}) => {
+  return (
+    <div
+      className="cateringbanner border-top border-dark"
+      style={{ position: "relative" }}
+    >
+      <Image
+        src={CateringMenuBanner}
+        alt="Beautiful dining experience at Hitchki"
+        fill
+        objectFit="cover"
+        quality={5}
+        style={{ zIndex: -1, opacity: 0.2 }}
+      />
+
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-lg-10 col-md-10 col-12 text-center">
+            <h1 className="display-2 fw-medium ">Catering Menu</h1>
+            <p className="text-white mt-4">
+              Our menu focuses on the region of Gujarat, India, which is famous
+              for its delicious pure vegetarian cuisine. This is the perfect
+              cuisine if you want to adopt a vegan or vegetarian menu for your
+              event. Take a look at our pure vegetarian catering menu by
+              clicking the link below.
+            </p>
+
+            <a
+              href="#"
+              className="btn btn-secondary fs-3 bannerbutton mt-3 rounded-pill ps-5 pe-5 pt-3 pb-3 border-0"
+              role="button"
+              aria-disabled="true"
+            >
+              
+              View Menu
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CateringMenu;
