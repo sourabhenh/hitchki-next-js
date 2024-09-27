@@ -44,7 +44,7 @@ const CateringGallery = () => {
       <div className="container-fluid">
         <div className="row justify-content-center">
           {images.map((image, index) => (
-            <div key={index} className="col-lg-2 col-md-2 col-4 p-0">
+            <div key={index} className="col-lg-2 col-md-2 col-3 p-0">
               <div className="imagecard w-100 position-relative">
                 <Image
                   alt={image.alt}
@@ -52,6 +52,7 @@ const CateringGallery = () => {
                   loading="lazy"
                   width={425}
                   height={425}
+                  className="responsive-image-gallery"
                   style={{
                     objectFit: "cover",
                   }}

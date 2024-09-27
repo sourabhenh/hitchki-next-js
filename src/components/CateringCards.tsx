@@ -1,9 +1,8 @@
 import Image from "next/image";
 import PrivateParties from "/public/images/private-parties.webp";
-import PrivatePartiesIcon from "/public/images/PrivatePartiesIcon.webp";
-import CorporateEventsIcon from "/public/images/CorporateEventsIcon.webp";
+
 import CorporateEvents from "/public/images/CorporateEvents.webp";
-import SpecialOccasionsIcon from "/public/images/SpecialOccasionsIcon.webp";
+
 import SpecialOccasions from "/public/images/SpecialOccasions.webp";
 
 const cateringData = [
@@ -11,21 +10,21 @@ const cateringData = [
     title: "Private Parties",
     description: "From birthdays to engagements or just a casual hangout, Hitchki has your private party covered with delicious menu options! Whether its apps, mains, or desserts, choose from our party packages or create your own. We cater from 10 to 150 guests — let's make it a feast to remember!",
     imgSrc: PrivateParties,
-    iconSrc: PrivatePartiesIcon,
+ 
     alt: "Private Parties",
   },
   {
     title: "Corporate Events",
     description: "Turn your next corporate event into something more than just business with catering from Hitchki! Wow your clients or treat your team to top-notch food from our extensive menu. From working lunches to sit-down dinners, we've got your corporate event covered!",
     imgSrc: CorporateEvents,
-    iconSrc: CorporateEventsIcon,
+   
     alt: "Corporate Events",
   },
   {
     title: "Special Occasions",
     description: "From 'I do' to 'Happy Birthday!' and everything in between, Hitchki is here to make your celebration memorable with amazing food and service. Whether it's a wedding, anniversary, or rehearsal dinner, we'll whip up the perfect menu that fits your budget and leaves everyone craving more!",
     imgSrc: SpecialOccasions,
-    iconSrc: SpecialOccasionsIcon,
+ 
     alt: "Special Occasions",
   },
 ];
@@ -59,7 +58,7 @@ const CateringCards = () => {
                   <div className="col-lg-6 col-md-6 col-12">
                     <div className="card-body h-100 p-5 d-flex align-content-center flex-wrap">
                       <h5 className="card-title card-icon display-5 w-100 mb-4">
-                        <Image alt={card.alt} src={card.iconSrc} loading="eager" width={60} height={60} />
+                     
                         {card.title}
                       </h5>
                       <p className="card-text">{card.description}</p>
