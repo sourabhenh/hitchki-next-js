@@ -27,11 +27,12 @@ const About = ({}) => {
                   alt="Second slide"
                   src={Aboutus}
                   loading="eager"
-                  fill
+                  width={500}
+                  height={500}
                   className="w-100 "
                   style={{
                     objectFit: "cover",
-                    position: "",
+                
                   }}
                 />
               </span>

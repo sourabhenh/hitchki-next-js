@@ -2,9 +2,7 @@ import Image from "next/image";
 import HitchkiLogo from "/public/images/logo-hitchki.png";
 import { NextPage } from "next";
 
-interface Props {}
-
-const Navbar: NextPage<Props> = ({}) => {
+const Navbar: NextPage = () => {
   return (
     <div className="HeaderNav position-fixed">
       <div className="container ">
@@ -16,9 +14,10 @@ const Navbar: NextPage<Props> = ({}) => {
                   alt="HitchKi Logo"
                   src={HitchkiLogo}
                   loading="eager"
-                  fill
+                  width={250}
+                  height={49}
                   className="w-100 d-block"
-                  style={{ objectFit: "contain", position: "" }}
+                  style={{ objectFit: "contain" }}
                 />
               </a>
               <button
@@ -32,25 +31,16 @@ const Navbar: NextPage<Props> = ({}) => {
               >
                 <span className="navbar-toggler-icon"></span>
               </button>
-              <div
-                className="collapse navbar-collapse"
-                id="navbarSupportedContent"
-              >
+              <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      aria-current="page"
-                      href="tel:971522519983"
-                    >
-                      <i className="bi bi-telephone-forward-fill"></i> +971 52
-                      251 9983
+                    <a className="nav-link" aria-current="page" href="tel:971522519983">
+                      <i className="bi bi-telephone-forward-fill"></i> +971 52 251 9983
                     </a>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="mailto:franchise@hitchki.co">
-                      <i className="bi bi-envelope-at-fill"></i>
-                      franchise@hitchki.co
+                      <i className="bi bi-envelope-at-fill"></i> franchise@hitchki.co
                     </a>
                   </li>
                 </ul>

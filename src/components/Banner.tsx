@@ -3,8 +3,7 @@ import SlideOne from "/public/images/banner-1.webp";
 import SlideTwo from "/public/images/banner-2.webp";
 import { NextPage } from "next";
 
-interface Props {}
-
+// No need for Props interface if not using props
 const slides = [
   {
     image: SlideOne,
@@ -22,16 +21,17 @@ const slides = [
   },
 ];
 
-const Banner: NextPage<Props> = () => {
+const Banner: NextPage = () => {
   return (
     <div className="container-fluid">
-      <div className="row ">
+      <div className="row">
         <div className="col-md-12 p-0">
           <div className="bannerSlide position-relative w-100">
             <div
               id="carouselExampleFade"
-              className="carousel slide carousel-fade h-100" data-bs-ride="carousel">
-            
+              className="carousel slide carousel-fade h-100"
+              data-bs-ride="carousel"
+            >
               <div className="carousel-inner h-100">
                 {slides.map((slide, index) => (
                   <div
@@ -51,24 +51,21 @@ const Banner: NextPage<Props> = () => {
                     <div className="carousel-caption d-md-block z-3">
                       <div className="container">
                         <div className="row justify-content-center">
-
-                        <div className="col-lg-10 col-md-10 col-12">
-                          <h5 className="fw-semibold display-1">
-                            {slide.heading}
-                          </h5>
-                          <p className="fs-5 text-white">{slide.description}</p>
-                          <a
-                            href="#"
-                            className="btn btn-secondary fs-3 bannerbutton mt-2 rounded-pill ps-5 pe-5 pt-3 pb-3 border-0"
-                            role="button"
-                            aria-disabled="true"
-                          >
-                            Get In Touch
-                          </a>
+                          <div className="col-lg-12 col-md-12 col-12">
+                            <h5 className="fw-semibold display-1">
+                              {slide.heading}
+                            </h5>
+                            <p className="fs-5 text-white">{slide.description}</p>
+                            <a
+                              href="#contactform"
+                              className="btn btn-secondary fs-3 bannerbutton mt-2 rounded-pill ps-5 pe-5 pt-3 pb-3 border-0"
+                              role="button"
+                              aria-disabled="true"
+                            >
+                              Get In Touch
+                            </a>
+                          </div>
                         </div>
-                        </div>
-
-
                       </div>
                     </div>
                   </div>

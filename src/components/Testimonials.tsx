@@ -23,10 +23,9 @@ const Testimonials = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-8 text-center">
-            <h1 className="display-2 fw-medium">Customer Testimonials</h1>
+            <h1 className="display-3 fw-medium">Customer Testimonials</h1>
             <p>
-              We have had the pleasure of providing our pure vegetarian catering services for numerous events and occasions. 
-              Here are some testimonials from previous clients.
+            Hear what our satisfied clients say! From flawless events to mouthwatering menus, our catering leaves a lasting impression. Your guests deserve the best; we’re here to deliver unforgettable experiences!
             </p>
           </div>
         </div>

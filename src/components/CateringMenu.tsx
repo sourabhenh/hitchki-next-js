@@ -19,13 +19,13 @@ const CateringMenu = ({}) => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-10 col-md-10 col-12 text-center">
-            <h1 className="display-2 fw-medium ">Catering Menu</h1>
+            <h1 className="display-3 fw-medium ">Catering Menu</h1>
             <p className="text-white mt-4">
-              Our menu focuses on the region of Gujarat, India, which is famous
-              for its delicious pure vegetarian cuisine. This is the perfect
-              cuisine if you want to adopt a vegan or vegetarian menu for your
-              event. Take a look at our pure vegetarian catering menu by
-              clicking the link below.
+            Craving authentic vegetarian goodness? Our menu brings you the vibrant flavors of Gujarat, India — famous for its mouthwatering, pure vegetarian dishes! Whether you're going all-in on a vegan or vegetarian spread for your event, we've got you covered.
+            </p>
+            <p className="text-white mt-4">
+Ready to check out your options? Click the link below!
+
             </p>
 
             <a

@@ -14,6 +14,7 @@ import Testimonials from "@/components/Testimonials";
 
 import ContactForm from "@/components/ContactForm";
 import Copyright from "@/components/Copyright";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 
 
@@ -32,7 +33,7 @@ export default function Home() {
 <Testimonials/>
 <ContactForm/>
 <Copyright/>
-
+<SpeedInsights/>
 
 </>
 

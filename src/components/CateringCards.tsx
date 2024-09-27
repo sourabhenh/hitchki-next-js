@@ -9,28 +9,21 @@ import SpecialOccasions from "/public/images/SpecialOccasions.webp";
 const cateringData = [
   {
     title: "Private Parties",
-    description: `Whether it's a birthday celebration, engagement party, or casual get-together, 
-    Hitchki Global Indian Restaurant can cater for your private party with a variety of tasty menu options. 
-    From appetizers and salads to main courses and desserts, browse our party packages or customize your own menu. 
-    We cater to groups as small as 10 or as large as 150 people.`,
+    description: "From birthdays to engagements or just a casual hangout, Hitchki has your private party covered with delicious menu options! Whether its apps, mains, or desserts, choose from our party packages or create your own. We cater from 10 to 150 guests — let's make it a feast to remember!",
     imgSrc: PrivateParties,
     iconSrc: PrivatePartiesIcon,
     alt: "Private Parties",
   },
   {
     title: "Corporate Events",
-    description: `Make your next corporate event more than just another business function with catering from Hitchki Global Indian Restaurant. 
-    Impress clients or reward employees with high-quality food from our extensive menu. 
-    We provide working lunches, sit-down dinners, and more for corporate events.`,
+    description: "Turn your next corporate event into something more than just business with catering from Hitchki! Wow your clients or treat your team to top-notch food from our extensive menu. From working lunches to sit-down dinners, we've got your corporate event covered!",
     imgSrc: CorporateEvents,
     iconSrc: CorporateEventsIcon,
     alt: "Corporate Events",
   },
   {
     title: "Special Occasions",
-    description: `From wedding receptions to birthdays, anniversaries, rehearsal dinners, and beyond - 
-    we want to make your special day truly memorable with remarkable cuisine and service. 
-    Our team will work within your budget to ensure the perfect menu for your occasion.`,
+    description: "From 'I do' to 'Happy Birthday!' and everything in between, Hitchki is here to make your celebration memorable with amazing food and service. Whether it's a wedding, anniversary, or rehearsal dinner, we'll whip up the perfect menu that fits your budget and leaves everyone craving more!",
     imgSrc: SpecialOccasions,
     iconSrc: SpecialOccasionsIcon,
     alt: "Special Occasions",
@@ -43,7 +36,7 @@ const CateringCards = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <h1 className="display-2 fw-medium text-center mb-5">
+            <h1 className="display-3 fw-medium text-center mb-5">
               Exceptional Catering, Tailored for You
             </h1>
 
@@ -56,21 +49,22 @@ const CateringCards = () => {
                         alt={card.alt}
                         src={card.imgSrc}
                         loading="eager"
-                        fill
+                        width={500}
+                        height={600}
                         className="w-100"
-                        style={{ objectFit: "cover", position: "", }}
+                        style={{ objectFit: "cover", }}
                       />
                     </div>
                   )}
                   <div className="col-lg-6 col-md-6 col-12">
                     <div className="card-body h-100 p-5 d-flex align-content-center flex-wrap">
-                      <h5 className="card-title card-icon display-4 w-100 mb-4">
-                        <Image alt={card.alt} src={card.iconSrc} loading="eager" width={80} height={80} />
+                      <h5 className="card-title card-icon display-5 w-100 mb-4">
+                        <Image alt={card.alt} src={card.iconSrc} loading="eager" width={60} height={60} />
                         {card.title}
                       </h5>
                       <p className="card-text">{card.description}</p>
                       <a
-                        href="#"
+                       href="#contactform"
                         className="btn btn-secondary fs-3 bannerbutton mt-3 rounded-pill ps-5 pe-5 pt-3 pb-3 border-0"
                         role="button"
                         aria-disabled="true"
@@ -85,9 +79,10 @@ const CateringCards = () => {
                         alt={card.alt}
                         src={card.imgSrc}
                         loading="eager"
-                        fill
+                        width={500}
+                        height={600}
                         className="w-100"
-                        style={{ objectFit: "cover", position: "", }}
+                        style={{ objectFit: "cover", }}
                       />
 
 
