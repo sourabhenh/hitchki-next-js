@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation"; // Updated import for useRouter
 
 export default function BootstrapForm() {
   const [formData, setFormData] = useState({
@@ -9,8 +10,9 @@ export default function BootstrapForm() {
     telephone: "",
     message: "",
   });
+  const [error, setError] = useState("");
+  const router = useRouter(); // Use Next.js router for redirection
 
-  // Type for input and textarea change events
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -20,14 +22,33 @@ export default function BootstrapForm() {
     });
   };
 
-  // Type for form submission event
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form data:", formData);
+
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
+
+      // Redirect to the thank you page after a successful submission
+      router.push('/thankyou');
+    } catch (err) {
+      setError("An error occurred while sending the message.");
+      console.error(err);
+    }
   };
 
   return (
     <form onSubmit={handleSubmit} className="p-3">
+      {error && <p className="text-danger">{error}</p>} {/* Display error message */}
       <div className="mb-3">
         <input
           type="text"
@@ -69,7 +90,7 @@ export default function BootstrapForm() {
 
       <div className="mb-3">
         <textarea
-          className="form-control form-control-lg "
+          className="form-control form-control-lg"
           id="message"
           placeholder="Message"
           name="message"
