@@ -1,6 +1,6 @@
 // src/app/api/sendEmail/route.ts
 
-import nodemailer from 'nodemailer'; // Import nodemailer
+import nodemailer from 'nodemailer';
 
 export async function POST(req: Request) {
   const { name, email, telephone, message } = await req.json();
@@ -8,13 +8,13 @@ export async function POST(req: Request) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.GMAIL_USER, // Use environment variable
-      pass: process.env.GMAIL_PASS, // Use environment variable
+      user: process.env.GMAIL_USER,
+      pass: process.env.GMAIL_PASS,
     },
   });
 
   const mailOptions = {
-    from: process.env.GMAIL_USER, // Use environment variable
+    from: process.env.GMAIL_USER,
     to: 'sourabh@enhmedia.com',
     subject: 'New Message from Contact Form',
     text: `Name: ${name}\nEmail: ${email}\nPhone: ${telephone}\nMessage: ${message}`,
@@ -24,6 +24,7 @@ export async function POST(req: Request) {
     await transporter.sendMail(mailOptions);
     return new Response(JSON.stringify({ success: true }), { status: 200 });
   } catch (error) {
-    return new Response(JSON.stringify({ success: false, error: error.message }), { status: 500 });
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    return new Response(JSON.stringify({ success: false, error: errorMessage }), { status: 500 });
   }
 }
