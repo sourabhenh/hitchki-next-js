@@ -24,10 +24,10 @@ const Cateringbanner = ({}) => {
 
             </h1>
             <p className="text-white mt-4">
-            At Hitchki, we're bringing back the best of Bollywood to jazz up all your parties with our top-notch catering crew! Doesn't matter if it's a party or an event, we're on a mission to give your guests all the feels with some classic nostalgia in a sleek, mod setting that'll leave 'em dazzled.  </p>
+            At Hitchki, we&apos;re bringing back the best of Bollywood to jazz up all your parties with our top-notch catering crew! Doesn&apos;t matter if it&apos;s a party or an event, we&apos;re on a mission to give your guests all the feels with some classic nostalgia in a sleek, mod setting that&apos;ll leave &apos;em dazzled.  </p>
             <p className="text-white mt-4">
 
-Now I know you're wondering what's on the menu - well we've got all the traditional faves and also some next-level mashups to tantalize those taste buds and thrill the senses. Each dish is lovingly made with care, combining signature flavors from back in the day with contemporary flair to transport your people straight to the golden age of Bollywood with every bite. And you best believe these number ones look as fabulous as they taste! Our presentations are artfully arranged so they're stylish yet true to the true recipes of old. 
+Now I know you&apos;re wondering what&apos;s on the menu - well we&apos;ve got all the traditional faves and also some next-level mashups to tantalize those taste buds and thrill the senses. Each dish is lovingly made with care, combining signature flavors from back in the day with contemporary flair to transport your people straight to the golden age of Bollywood with every bite. And you best believe these number ones look as fabulous as they taste! Our presentations are artfully arranged so they&apos;re stylish yet true to the true recipes of old. 
 </p>  <p className="text-white mt-4">
 So what are you waiting for - let Hitchki jazz up your event and make it absolutely unforgettable with our dynamite catering!
 
