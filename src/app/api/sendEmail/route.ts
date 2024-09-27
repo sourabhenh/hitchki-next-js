@@ -25,6 +25,7 @@ export async function POST(req: Request) {
     return new Response(JSON.stringify({ success: true }), { status: 200 });
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    console.error('Error sending email:', errorMessage); // Log the error for debugging
     return new Response(JSON.stringify({ success: false, error: errorMessage }), { status: 500 });
   }
 }
