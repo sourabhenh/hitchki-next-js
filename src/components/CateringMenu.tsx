@@ -21,7 +21,7 @@ const CateringMenu = ({}) => {
           <div className="col-lg-10 col-md-10 col-12 text-center">
             <h1 className="display-3 fw-medium ">Catering Menu</h1>
             <p className="text-white mt-4">
-            Craving authentic vegetarian goodness? Our menu brings you the vibrant flavors of Gujarat, India — famous for its mouthwatering, pure vegetarian dishes! Whether you&apos;re going all-in on a vegan or vegetarian spread for your event, we've got you covered.
+            Craving authentic vegetarian goodness? Our menu brings you the vibrant flavors of Gujarat, India — famous for its mouthwatering, pure vegetarian dishes! Whether you&apos;re going all-in on a vegan or vegetarian spread for your event, we&apos;ve got you covered.
             </p>
             <p className="text-white mt-4">
 Ready to check out your options? Click the link below!

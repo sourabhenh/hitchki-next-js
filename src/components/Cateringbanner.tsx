@@ -20,7 +20,7 @@ const Cateringbanner = ({}) => {
         <div className="row justify-content-center">
           <div className="col-md-12 text-center">
             <h1 className="display-3 fw-medium ">
-            Spice Up Your Event with Hitchki's Catering!
+            Spice Up Your Event with Hitchki&apos;s Catering!
 
             </h1>
             <p className="text-white mt-4">
