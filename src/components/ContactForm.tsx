@@ -43,7 +43,7 @@ const ContactForm = () => {
 
           {/* Contact Form Section */}
           <div className="col-md-7 border border-dark p-5 rounded-end" id="contactform">
-            <h2 className="text-white display-6 fw-medium w-100">Get In Touch with us for Catering</h2>
+            <h2 className="text-white display-6 fw-medium w-100">Get In Touch with us for Caterings</h2>
 
             <p className="text-white fs-5">
               Tell us about your event, and we&rsquo;ll guide you through the rest!
