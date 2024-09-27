@@ -21,7 +21,6 @@ const Cateringbanner = ({}) => {
           <div className="col-md-12 text-center">
             <h1 className="display-3 fw-medium ">
             Spice Up Your Event with Hitchki&apos;s Catering!
-
             </h1>
             <p className="text-white mt-4">
             At Hitchki, we&apos;re bringing back the best of Bollywood to jazz up all your parties with our top-notch catering crew! Doesn&apos;t matter if it&apos;s a party or an event, we&apos;re on a mission to give your guests all the feels with some classic nostalgia in a sleek, mod setting that&apos;ll leave &apos;em dazzled.  </p>
