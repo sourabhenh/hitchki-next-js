@@ -8,14 +8,14 @@ export async function POST(req: Request) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_PASS,
+      user: process.env.GMAIL_USER, // Your email
+      pass: process.env.GMAIL_PASS,   // Your app password
     },
   });
 
   const mailOptions = {
-    from: process.env.GMAIL_USER,
-    to: 'sourabh@enhmedia.com',
+    from: process.env.GMAIL_USER, // Your email
+    to: 'sanjaymasta@gmail.com',   // Recipient email
     subject: 'New Message from Contact Form',
     text: `Name: ${name}\nEmail: ${email}\nPhone: ${telephone}\nMessage: ${message}`,
   };
@@ -25,7 +25,7 @@ export async function POST(req: Request) {
     return new Response(JSON.stringify({ success: true }), { status: 200 });
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-    console.error('Error sending email:', errorMessage); // Log the error for debugging
+    console.error('Error sending email:', errorMessage);
     return new Response(JSON.stringify({ success: false, error: errorMessage }), { status: 500 });
   }
 }
