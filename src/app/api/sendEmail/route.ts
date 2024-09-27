@@ -1,22 +1,21 @@
 // src/app/api/sendEmail/route.ts
 
-import nodemailer from 'nodemailer';
+import nodemailer from 'nodemailer'; // Import nodemailer
 
 export async function POST(req: Request) {
   const { name, email, telephone, message } = await req.json();
 
-  // Create a transporter using Gmail SMTP
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'sanjaymasta@gmail.com', // Your Gmail address
-      pass: 'GmailSanjay@2024np,npm', // Your Gmail password or app-specific password
+      user: process.env.GMAIL_USER, // Use environment variable
+      pass: process.env.GMAIL_PASS, // Use environment variable
     },
   });
 
   const mailOptions = {
-    from: 'sanjaymasta@gmail.com', // Sender's email
-    to: 'sourabh@enhmedia.com', // Receiver's email
+    from: process.env.GMAIL_USER, // Use environment variable
+    to: 'sourabh@enhmedia.com',
     subject: 'New Message from Contact Form',
     text: `Name: ${name}\nEmail: ${email}\nPhone: ${telephone}\nMessage: ${message}`,
   };
